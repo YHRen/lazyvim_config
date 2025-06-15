@@ -2,7 +2,7 @@ return {
   "olimorris/codecompanion.nvim",
   keys = {
     { "<leader>aa", ":CodeCompanionChat Toggle<cr>", mode = "n", desc = "CodecompanionChat" },
-    { "<leader>ai", ":CodeCompanion", desc = "CodecompanionChat Inline" },
+    { "<leader>ai", ":CodeCompanion", mode = { "v", "n" }, desc = "CodecompanionChat Inline" },
   },
   dependencies = {
     "nvim-lua/plenary.nvim",
