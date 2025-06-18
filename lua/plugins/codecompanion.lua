@@ -4,11 +4,6 @@ return {
     { "<leader>aa", ":CodeCompanionChat Toggle<cr>", mode = "n", desc = "CodecompanionChat" },
     { "<leader>ai", ":CodeCompanion", mode = { "v", "n" }, desc = "CodecompanionChat Inline" },
   },
-  dependencies = {
-    "nvim-lua/plenary.nvim",
-    "nvim-treesitter/nvim-treesitter",
-    "ravitemer/mcphub.nvim",
-  },
   opts = {
     adapters = {
       -- adapters
@@ -65,5 +60,10 @@ return {
         },
       },
     },
+  },
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    "nvim-treesitter/nvim-treesitter",
+    "ravitemer/mcphub.nvim",
   },
 }
