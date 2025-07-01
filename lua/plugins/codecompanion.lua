@@ -7,6 +7,22 @@ return {
   opts = {
     adapters = {
       -- adapters
+      qwen3 = function()
+        return require("codecompanion.adapters").extend("ollama", {
+          name = "qwen3",
+          schema = {
+            model = {
+              default = "qwen3:235b",
+            },
+            num_ctx = {
+              default = 40960,
+            },
+            num_predict = {
+              default = -1,
+            },
+          },
+        })
+      end,
       deepseek = function()
         return require("codecompanion.adapters").extend("ollama", {
           name = "deepseek",
@@ -43,10 +59,10 @@ return {
     -- stratergies
     strategies = {
       chat = {
-        adapter = "devstral",
+        adapter = "qwen3",
       },
       inline = {
-        adapter = "devstral",
+        adapter = "qwen3",
       },
     },
     -- extensions mcp
